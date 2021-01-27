@@ -1,5 +1,5 @@
 fallzahlen.csv:
-	echo "created,modified,gemeinde,zahl1,zahl2,quelle" > fallzahlen.csv
+	echo "created,modified,gemeinde,faelle,infizierte,quelle" > fallzahlen.csv
 	ls artikel/*.html | xargs -n1 ./fallzahlen >> fallzahlen.csv
 
 artikel.tsv:
