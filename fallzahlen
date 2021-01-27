@@ -4,17 +4,17 @@ set -e
 # Liste der Fallzahlen pro Gemeinde
 
 FILE=$1
-[[ -s $FILE ]] || exit
+[[ -s $FILE ]] || exit 0
 
 TEXT=$(pup div.magazinetext ul li text{} < $1)
-[[ "$TEXT" =~ 'Flecken Adelebsen' ]] || exit
+[[ "$TEXT" =~ 'Flecken Adelebsen' ]] || exit 0
 
 export DATES=$(pup .artikeldatum text{} < $FILE | xargs | perl -ne '
   s/(\d\d)\.(\d\d)\.(20\d\d)/$3-$2-$1/g;                # convert to YYYY-MM-DD
   print join ",", (($_ =~ /([0-9-]+)/g), "")[0,1];     # created, modified
 ')
 
-export ID=$(echo "$FILE" | perl -pe 's/[^0-9]//g')
+export ID=$(echo "$FILE" | tr -cd 0-9)
 
 echo "$TEXT" | perl -nE '
   my ($ort, $zahlen) = $_ =~ m/^([GSF].+?)([0-9.(\/ ]+\)?)$/;
