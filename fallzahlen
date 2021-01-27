@@ -14,9 +14,11 @@ export DATES=$(pup .artikeldatum text{} < $FILE | xargs | perl -ne '
   print join ",", (($_ =~ /([0-9-]+)/g), "")[0,1];     # created, modified
 ')
 
+export ID=$(echo "$FILE" | perl -pe 's/[^0-9]//g')
+
 echo "$TEXT" | perl -nE '
   my ($ort, $zahlen) = $_ =~ m/^([GSF].+?)([0-9.(\/ ]+\)?)$/;
   exit unless $ort;
   $zahlen =~ s/[ ()]//g;
-  say join ",", $ENV{DATES}, $ort, ((split("/", $zahlen), "")[0,1]);
+  say join ",", $ENV{DATES}, $ort, ((split("/", $zahlen), "")[0,1]), $ENV{ID};
 '
