@@ -21,11 +21,14 @@ Zur Übersicht wird erstmal eine Liste aller Artikel mit Datum, URL und Titel er
 Anschließend werden aus den Artikeln Datum, Titel und Inhalt extrahiert:
 
 ~~~bash
-printf "id\tcreated\tmodified\ttitle\turl\n" > artikel.tsv
-ls artikel/*.html | xargs -n1 ./extract >> artikel.tsv
+make artikel.tsv
 ~~~
 
-Aus den Titel lässt sich schon oft die Zahl von Infizierten ablesen. Für die genauen Zahlen nach Gemeinde müssen die Artikelinhalte analysiert werden.
+Aus den Titel lässt sich schon oft die Zahl von Infizierten ablesen. Für die genauen Zahlen nach Gemeinde müssen die Artikelinhalte analysiert werden:
+
+~~~bash
+make fallzahlen.tsv
+~~~
 
 ## License
 
