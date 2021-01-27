@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+FILE=$1
+ID=$(echo "$FILE" | perl -pe 's/[^0-9]//g')
+URL="https://www.goettingen.de/magazin/artikel.php?artikel=$ID"
+
+# skip empty files and non-existing articles
+
+[[ -s $FILE ]] || exit
+
+TITLE=$(pup h1.content-title text{} < $FILE | xargs)
+[[ $TITLE == *"Diese Seite gibt es leider nicht"* ]] && exit
+
+DATES=$(pup .artikeldatum text{} < $FILE | xargs | perl -ne '
+  s/(\d\d)\.(\d\d)\.(20\d\d)/$3-$2-$1/g;                # convert to YYYY-MM-DD
+  print join "\t", (($_ =~ /([0-9-]+)/g), "")[0,1];     # created, modified
+')
+
+printf "%s\t%s\t%s\t%s\n" $ID "$DATES" "$URL" "$TITLE"

@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+# Download articles from Göttingen homepage by their article id
+
+mkdir -p artikel
+
+for ID in "$@"
+do
+  if [[ $ID == [1-9]*([0-9]) ]]
+  then
+    FILE=$(printf "artikel/%04d.html" $ID)
+    wget -q -N -O $FILE "https://www.goettingen.de/magazin/artikel.php?artikel=$1"    
+    echo $FILE
+  fi
+done
