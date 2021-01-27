@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+FIRST=$(ls artikel/*.html | tail -1 | tr -cd '0-9')
+if [[ -z "$FIRST" ]]
+then
+  FIRST=3064
+else
+  FIRST=$((FIRST+1))
+fi
+
+# The RSS feed at least contains the newest article ID
+LAST=$(curl -s "https://www.goettingen.de/magazin/view-irss.php?feedid=1" | grep -Po 'artikel=\K[0-9]+' | sort -rn | head -1)
+
+# header
+[[ -f fallzahlen.csv ]] || echo "created,modified,gemeinde,faelle,infizierte,quelle" > fallzahlen.csv
+
+# download and analyze new articles
+for ID in $(seq $FIRST $LAST)
+do
+  ./download $ID
+  ./fallzahlen artikel/$ID.html >> fallzahlen.csv
+  sleep 1
+done

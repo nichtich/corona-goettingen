@@ -23,8 +23,6 @@ Da der RSS-Feed der Homepage der Stadt Göttingen nicht richtig zu funktionieren
 for i in {3064..4310}; do ./download $i; sleep 1; done
 ~~~
 
-*Die ID des letzten Artikels muss jeweils noch per Hand aktualisiert werden*
-
 Zur Übersicht wird erstmal eine Liste aller Artikel mit Datum, URL und Titel erstellt:
 Anschließend werden aus den Artikeln Datum, Titel und Inhalt extrahiert:
 
@@ -37,6 +35,8 @@ Aus den Titel lässt sich schon oft die Zahl von Infizierten ablesen. Für die g
 ~~~bash
 make fallzahlen.tsv
 ~~~
+
+Das Skript `update` ermittelt automatisch die letzte Artikel-ID, läd alle fehlenden Artikel herunter und erweitert die Datei `fallzahlen.tsv`.
 
 ### Datenanalyse
 
