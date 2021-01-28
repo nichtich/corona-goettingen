@@ -22,3 +22,12 @@ do
   ./fallzahlen artikel/$ID.html >> fallzahlen.csv
   sleep 1
 done
+
+COMMIT=$1
+CHANGED=$(git diff-index --name-only HEAD --)
+if [[ "$COMMIT" == "commit" && "$CHANGED" == "fallzahlen.csv" ]]
+then
+  DATE=$(tail -1 fallzahlen.csv | awk -F, '{print $1}')
+  git add fallzahlen.csv
+  git commit -m "Update $DATE"
+fi

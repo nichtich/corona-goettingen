@@ -36,7 +36,11 @@ Aus den Titel lässt sich schon oft die Zahl von Infizierten ablesen. Für die g
 make fallzahlen.tsv
 ~~~
 
-Das Skript `update` ermittelt automatisch die letzte Artikel-ID, läd alle fehlenden Artikel herunter und erweitert die Datei `fallzahlen.tsv`.
+Das Skript `update` ermittelt automatisch die letzte Artikel-ID, läd alle fehlenden Artikel herunter und erweitert die Datei `fallzahlen.tsv`. Mit dem Argument `commit` wird die Aktualisierung gleich im git-Repository committed:
+
+~~~
+./update commit
+~~~
 
 ### Datenanalyse
 
