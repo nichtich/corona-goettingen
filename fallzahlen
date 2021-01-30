@@ -10,15 +10,16 @@ TEXT=$(pup div.magazinetext ul li text{} < $1)
 [[ "$TEXT" =~ 'Flecken Adelebsen' ]] || exit 0
 
 export DATES=$(pup .artikeldatum text{} < $FILE | xargs | perl -ne '
-  s/(\d\d)\.(\d\d)\.(20\d\d)/$3-$2-$1/g;                # convert to YYYY-MM-DD
+  s/(\d\d)\.(\d\d)\.(20\d\d)/$3-$2-$1/g;               # convert to YYYY-MM-DD
   print join ",", (($_ =~ /([0-9-]+)/g), "")[0,1];     # created, modified
 ')
 
 export ID=$(echo "$FILE" | tr -cd 0-9)
 
-echo "$TEXT" | perl -nE '
-  my ($ort, $zahlen) = $_ =~ m/^([GSF].+?)([0-9.(\/ ]+\)?)$/;
+echo "$TEXT" | perl -CS -nE '
+  my ($ort, $zahlen) = $_ =~ m/^([GSF].+?)([0-9.(\/\s]+)[)\s]*$/;
   exit unless $ort;
-  $zahlen =~ s/[ ()]//g;
+  $ort =~ s/ zusammen//;
+  $zahlen =~ s/[\s()]//g;
   say join ",", $ENV{DATES}, $ort, ((split("/", $zahlen), "")[0,1]), $ENV{ID};
 '
