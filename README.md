@@ -1,6 +1,8 @@
 # corona-goettingen
 
-Dieses Repository enthält Skripte zum Herunterladen der Corona-Fallzahlen auf Gemeindeebene aus dem Landkreis Göttingen.
+Dieses Repository enthält Skripte zum Herunterladen und Analysieren der Corona-Fallzahlen des Landkreis Göttingen auf Gemeindeebene. Die Zahlen stammen [von der Homepage der Stadt Göttingen](https://www.goettingen.de/aktuelles.html) wo sie seit April 2020 veröffentlicht werden.
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nichtich/corona-goettingen/HEAD?filepath=Fallzahlen.ipynb)
 
 ## Requirements
 
