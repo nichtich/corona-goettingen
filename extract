@@ -9,9 +9,6 @@ URL="https://www.goettingen.de/magazin/artikel.php?artikel=$ID"
 
 [[ -s $FILE ]] || exit 0
 
-# skip duplicated article
-[[ $ID -eq "3307" ]] && exit
-
 TITLE=$(pup h1.content-title text{} < $FILE | xargs)
 [[ $TITLE == *"Diese Seite gibt es leider nicht"* ]] && exit 0
 
