@@ -23,6 +23,6 @@ echo "$TEXT" | perl -CS -nE '
   my ($ort, $zahlen) = $_ =~ m/^([GSF].+?)([0-9.(\/\s]+)[)\s]*$/;
   exit unless $ort;
   $ort =~ s/ zusammen//;
-  $zahlen =~ s/[\s()]//g;
+  $zahlen =~ s/[\s().]//g;
   say join ",", $ENV{DATES}, $ort, ((split("/", $zahlen), "")[0,1]), $ENV{ID};
 ' | tac | sort -u -t, -k3,3
