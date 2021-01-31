@@ -14,7 +14,7 @@ TITLE=$(pup h1.content-title text{} < $FILE | xargs)
 
 DATES=$(pup .artikeldatum text{} < $FILE | xargs | perl -ne '
   s/(\d\d)\.(\d\d)\.(20\d\d)/$3-$2-$1/g;                # convert to YYYY-MM-DD
-  print join "\t", (($_ =~ /([0-9-]+)/g), "")[0,1];     # created, modified
+  print join "\t", (($_ =~ /([0-9-]+)/g), "")[0,1];     # datum, update
 ')
 
 printf "%s\t%s\t%s\t%s\n" $ID "$DATES" "$URL" "$TITLE"

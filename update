@@ -13,7 +13,7 @@ fi
 LAST=$(curl -s "https://www.goettingen.de/magazin/view-irss.php?feedid=1" | grep -Po 'artikel=\K[0-9]+' | sort -rn | head -1)
 
 # header
-[[ -f fallzahlen.csv ]] || echo "created,modified,gemeinde,faelle,infizierte,quelle" > fallzahlen.csv
+[[ -f fallzahlen.csv ]] || echo "datum,update,gemeinde,faelle,infizierte,quelle" > fallzahlen.csv
 
 # download and analyze new articles
 for ID in $(seq $FIRST $LAST)

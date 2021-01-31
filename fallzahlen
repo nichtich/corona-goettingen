@@ -16,7 +16,7 @@ export ID=$(echo "$FILE" | tr -cd 0-9)
 
 export DATES=$(pup .artikeldatum text{} < $FILE | xargs | perl -ne '
   s/(\d\d)\.(\d\d)\.(20\d\d)/$3-$2-$1/g;               # convert to YYYY-MM-DD
-  print join ",", (($_ =~ /([0-9-]+)/g), "")[0,1];     # created, modified
+  print join ",", (($_ =~ /([0-9-]+)/g), "")[0,1];     # datum, update
 ')
 
 echo "$TEXT" | perl -CS -nE '
