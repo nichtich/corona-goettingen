@@ -16,6 +16,40 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-04-19,2020-04-20,Samtgemeinde Radolfshausen,2,,3256
 2020-04-19,2020-04-20,Gemeinde Staufenberg,5,,3256
 2020-04-19,2020-04-20,Gemeinde Walkenried,2,,3256
+2020-04-21,,Flecken Adelebsen,6,,3264
+2020-04-21,,Gemeinde Bad Grund (Harz),43,,3264
+2020-04-21,,Stadt Bad Lauterberg im Harz,63,,3264
+2020-04-21,,Stadt Bad Sachsa,58,,3264
+2020-04-21,,Flecken Bovenden,7,,3264
+2020-04-21,,Samtgemeinde Dransfeld,12,,3264
+2020-04-21,,Stadt Duderstadt,23,,3264
+2020-04-21,,Gemeinde Friedland,2,,3264
+2020-04-21,,Samtgemeinde Gieboldehausen,17,,3264
+2020-04-21,,Gemeinde Gleichen,6,,3264
+2020-04-21,,Stadt Hann. Münden,14,,3264
+2020-04-21,,Samtgemeinde Hattorf am Harz und Stadt Herzberg am Harz,216,,3264
+2020-04-21,,Stadt Osterode am Harz,78,,3264
+2020-04-21,,Samtgemeinde Radolfshausen,2,,3264
+2020-04-21,,Gemeinde Rosdorf,8,,3264
+2020-04-21,,Gemeinde Staufenberg,5,,3264
+2020-04-21,,Gemeinde Walkenried,3,,3264
+2020-04-23,,Flecken Adelebsen,6,,3275
+2020-04-23,,Gemeinde Bad Grund (Harz),45,,3275
+2020-04-23,,Stadt Bad Lauterberg im Harz,68,,3275
+2020-04-23,,Stadt Bad Sachsa,59,,3275
+2020-04-23,,Flecken Bovenden,7,,3275
+2020-04-23,,Samtgemeinde Dransfeld,12,,3275
+2020-04-23,,Stadt Duderstadt,23,,3275
+2020-04-23,,Gemeinde Friedland,2,,3275
+2020-04-23,,Samtgemeinde Gieboldehausen,17,,3275
+2020-04-23,,Gemeinde Gleichen,6,,3275
+2020-04-23,,Stadt Hann. Münden,15,,3275
+2020-04-23,,Samtgemeinde Hattorf am Harz und Stadt Herzberg am Harz,222,,3275
+2020-04-23,,Stadt Osterode am Harz,79,,3275
+2020-04-23,,Samtgemeinde Radolfshausen,2,,3275
+2020-04-23,,Gemeinde Rosdorf,8,,3275
+2020-04-23,,Gemeinde Staufenberg,5,,3275
+2020-04-23,,Gemeinde Walkenried,3,,3275
 2020-04-25,2020-06-10,Flecken Adelebsen,6,,3286
 2020-04-25,2020-06-10,Gemeinde Bad Grund (Harz),45,,3286
 2020-04-25,2020-06-10,Stadt Bad Lauterberg im Harz,71,,3286
@@ -33,6 +67,23 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-04-25,2020-06-10,Gemeinde Rosdorf,8,,3286
 2020-04-25,2020-06-10,Gemeinde Staufenberg,5,,3286
 2020-04-25,2020-06-10,Gemeinde Walkenried,3,,3286
+2020-04-26,2020-06-10,Flecken Adelebsen,6,,3287
+2020-04-26,2020-06-10,Gemeinde Bad Grund (Harz),45,,3287
+2020-04-26,2020-06-10,Stadt Bad Lauterberg im Harz,73,,3287
+2020-04-26,2020-06-10,Stadt Bad Sachsa,70,,3287
+2020-04-26,2020-06-10,Flecken Bovenden,7,,3287
+2020-04-26,2020-06-10,Samtgemeinde Dransfeld,12,,3287
+2020-04-26,2020-06-10,Stadt Duderstadt,24,,3287
+2020-04-26,2020-06-10,Gemeinde Friedland,2,,3287
+2020-04-26,2020-06-10,Samtgemeinde Gieboldehausen,19,,3287
+2020-04-26,2020-06-10,Gemeinde Gleichen,6,,3287
+2020-04-26,2020-06-10,Stadt Hann. Münden,16,,3287
+2020-04-26,2020-06-10,Samtgemeinde Hattorf am Harz und Stadt Herzberg am Harz,229,,3287
+2020-04-26,2020-06-10,Stadt Osterode am Harz,79,,3287
+2020-04-26,2020-06-10,Samtgemeinde Radolfshausen,2,,3287
+2020-04-26,2020-06-10,Gemeinde Rosdorf,8,,3287
+2020-04-26,2020-06-10,Gemeinde Staufenberg,5,,3287
+2020-04-26,2020-06-10,Gemeinde Walkenried,3,,3287
 2020-04-27,,Flecken Adelebsen,6,,3292
 2020-04-27,,Gemeinde Bad Grund (Harz),45,,3292
 2020-04-27,,Stadt Bad Lauterberg im Harz,75,,3292
@@ -130,24 +181,64 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-05-05,,Gemeinde Gleichen,6,0,3321
 2020-05-05,,Stadt Göttingen,165,26,3321
 2020-05-05,,Stadt Hann. Münden,16,2,3321
+2020-05-05,,Samtgemeinde Hattorf am Harz,,,3321
 2020-05-06,,Flecken Adelebsen,6,3,3329
 2020-05-06,,Gemeinde Bad Grund (Harz),45,8,3329
 2020-05-06,,Stadt Bad Lauterberg im Harz,78,15,3329
 2020-05-06,,Stadt Bad Sachsa,74,20,3329
 2020-05-06,,Flecken Bovenden,7,2,3329
 2020-05-06,,Samtgemeinde Dransfeld,12,1,3329
+2020-05-06,,Stadt Duderstadt,24,4,3329
+2020-05-06,,Gemeinde Friedland,2,1,3329
+2020-05-06,,Samtgemeinde Gieboldehausen,19,6,3329
+2020-05-06,,Gemeinde Gleichen,6,0,3329
+2020-05-06,,Stadt Göttingen,165,25,3329
+2020-05-06,,Stadt Hann. Münden,16,2,3329
+2020-05-06,,Samtgemeinde Hattorf am Harz,42,8,3329
+2020-05-06,,Stadt Herzberg am Harz,202,30,3329
+2020-05-06,,Stadt Osterode am Harz,91,25,3329
+2020-05-06,,Samtgemeinde Radolfshausen,2,0,3329
+2020-05-06,,Gemeinde Rosdorf,7,0,3329
+2020-05-06,,Gemeinde Staufenberg,5,1,3329
+2020-05-06,,Gemeinde Walkenried,4,1,3329
 2020-05-07,,Flecken Adelebsen,6,3,3333
 2020-05-07,,Gemeinde Bad Grund (Harz),45,8,3333
 2020-05-07,,Stadt Bad Lauterberg im Harz,78,12,3333
 2020-05-07,,Stadt Bad Sachsa,74,19,3333
 2020-05-07,,Flecken Bovenden,7,2,3333
 2020-05-07,,Samtgemeinde Dransfeld,12,1,3333
+2020-05-07,,Stadt Duderstadt,24,2,3333
+2020-05-07,,Gemeinde Friedland,2,1,3333
+2020-05-07,,Samtgemeinde Gieboldehausen,19,5,3333
+2020-05-07,,Gemeinde Gleichen,6,0,3333
+2020-05-07,,Stadt Göttingen,165,25,3333
+2020-05-07,,Stadt Hann. Münden,16,1,3333
+2020-05-07,,Samtgemeinde Hattorf am Harz,42,8,3333
+2020-05-07,,Stadt Herzberg am Harz,202,30,3333
+2020-05-07,,Stadt Osterode am Harz,92,26,3333
+2020-05-07,,Samtgemeinde Radolfshausen,2,0,3333
+2020-05-07,,Gemeinde Rosdorf,8,0,3333
+2020-05-07,,Gemeinde Staufenberg,5,1,3333
+2020-05-07,,Gemeinde Walkenried,4,1,3333
 2020-05-08,,Flecken Adelebsen,6,3,3340
 2020-05-08,,Gemeinde Bad Grund (Harz),45,8,3340
 2020-05-08,,Stadt Bad Lauterberg im Harz,78,12,3340
 2020-05-08,,Stadt Bad Sachsa,74,19,3340
 2020-05-08,,Flecken Bovenden,7,2,3340
 2020-05-08,,Samtgemeinde Dransfeld,12,1,3340
+2020-05-08,,Stadt Duderstadt,24,2,3340
+2020-05-08,,Gemeinde Friedland,2,1,3340
+2020-05-08,,Samtgemeinde Gieboldehausen,19,5,3340
+2020-05-08,,Gemeinde Gleichen,6,0,3340
+2020-05-08,,Stadt Göttingen,165,25,3340
+2020-05-08,,Stadt Hann. Münden,16,1,3340
+2020-05-08,,Samtgemeinde Hattorf am Harz,42,8,3340
+2020-05-08,,Stadt Herzberg am Harz,202,27,3340
+2020-05-08,,Stadt Osterode am Harz,92,25,3340
+2020-05-08,,Samtgemeinde Radolfshausen,2,0,3340
+2020-05-08,,Gemeinde Rosdorf,8,0,3340
+2020-05-08,,Gemeinde Staufenberg,5,1,3340
+2020-05-08,,Gemeinde Walkenried,4,1,3340
 2020-05-09,2020-05-10,Flecken Adelebsen,7,4,3341
 2020-05-09,2020-05-10,Gemeinde Bad Grund (Harz),45,7,3341
 2020-05-09,2020-05-10,Stadt Bad Lauterberg im Harz,78,10,3341
@@ -192,6 +283,19 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-05-11,,Stadt Bad Sachsa,76,10,3347
 2020-05-11,,Flecken Bovenden,8,3,3347
 2020-05-11,,Samtgemeinde Dransfeld,12,1,3347
+2020-05-11,,Stadt Duderstadt,24,2,3347
+2020-05-11,,Gemeinde Friedland,2,1,3347
+2020-05-11,,Samtgemeinde Gieboldehausen,19,5,3347
+2020-05-11,,Gemeinde Gleichen,6,0,3347
+2020-05-11,,Stadt Göttingen,171,26,3347
+2020-05-11,,Stadt Hann. Münden,16,1,3347
+2020-05-11,,Samtgemeinde Hattorf am Harz,43,7,3347
+2020-05-11,,Stadt Herzberg am Harz,204,26,3347
+2020-05-11,,Stadt Osterode am Harz,92,23,3347
+2020-05-11,,Samtgemeinde Radolfshausen,2,0,3347
+2020-05-11,,Gemeinde Rosdorf,8,0,3347
+2020-05-11,,Gemeinde Staufenberg,5,1,3347
+2020-05-11,,Gemeinde Walkenried,4,0,3347
 2020-05-12,,Flecken Adelebsen,7,4,3351
 2020-05-12,,Gemeinde Bad Grund (Harz),45,4,3351
 2020-05-12,,Stadt Bad Lauterberg im Harz,78,8,3351
@@ -217,12 +321,38 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-05-13,2020-05-15,Stadt Bad Sachsa,76,9,3361
 2020-05-13,2020-05-15,Flecken Bovenden,8,3,3361
 2020-05-13,2020-05-15,Samtgemeinde Dransfeld,12,1,3361
+2020-05-13,2020-05-15,Stadt Duderstadt,25,2,3361
+2020-05-13,2020-05-15,Gemeinde Friedland,2,1,3361
+2020-05-13,2020-05-15,Samtgemeinde Gieboldehausen,19,5,3361
+2020-05-13,2020-05-15,Gemeinde Gleichen,6,0,3361
+2020-05-13,2020-05-15,Stadt Göttingen,169,22,3361
+2020-05-13,2020-05-15,Stadt Hann. Münden,16,0,3361
+2020-05-13,2020-05-15,Samtgemeinde Hattorf am Harz,42,6,3361
+2020-05-13,2020-05-15,Stadt Herzberg am Harz,205,22,3361
+2020-05-13,2020-05-15,Stadt Osterode am Harz,92,18,3361
+2020-05-13,2020-05-15,Samtgemeinde Radolfshausen,2,0,3361
+2020-05-13,2020-05-15,Gemeinde Rosdorf,8,0,3361
+2020-05-13,2020-05-15,Gemeinde Staufenberg,5,1,3361
+2020-05-13,2020-05-15,Gemeinde Walkenried,4,0,3361
 2020-05-14,,Flecken Adelebsen,6,3,3372
 2020-05-14,,Gemeinde Bad Grund (Harz),45,4,3372
 2020-05-14,,Stadt Bad Lauterberg im Harz,81,10,3372
 2020-05-14,,Stadt Bad Sachsa,76,9,3372
 2020-05-14,,Flecken Bovenden,7,2,3372
 2020-05-14,,Samtgemeinde Dransfeld,12,1,3372
+2020-05-14,,Stadt Duderstadt,25,2,3372
+2020-05-14,,Gemeinde Friedland,2,1,3372
+2020-05-14,,Samtgemeinde Gieboldehausen,20,6,3372
+2020-05-14,,Gemeinde Gleichen,6,0,3372
+2020-05-14,,Stadt Göttingen,169,22,3372
+2020-05-14,,Stadt Hann. Münden,16,0,3372
+2020-05-14,,Samtgemeinde Hattorf am Harz,42,5,3372
+2020-05-14,,Stadt Herzberg am Harz,205,20,3372
+2020-05-14,,Stadt Osterode am Harz,92,16,3372
+2020-05-14,,Samtgemeinde Radolfshausen,2,0,3372
+2020-05-14,,Gemeinde Rosdorf,8,0,3372
+2020-05-14,,Gemeinde Staufenberg,5,1,3372
+2020-05-14,,Gemeinde Walkenried,4,0,3372
 2020-05-15,,Flecken Adelebsen,6,3,3377
 2020-05-15,,Gemeinde Bad Grund (Harz),45,4,3377
 2020-05-15,,Stadt Bad Lauterberg im Harz,82,9,3377
@@ -267,18 +397,57 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-05-18,2020-06-10,Stadt Bad Sachsa,76,5,3382
 2020-05-18,2020-06-10,Flecken Bovenden,7,2,3382
 2020-05-18,2020-06-10,Samtgemeinde Dransfeld,12,1,3382
+2020-05-18,2020-06-10,Stadt Duderstadt,25,2,3382
+2020-05-18,2020-06-10,Gemeinde Friedland,2,1,3382
+2020-05-18,2020-06-10,Samtgemeinde Gieboldehausen,20,5,3382
+2020-05-18,2020-06-10,Gemeinde Gleichen,6,0,3382
+2020-05-18,2020-06-10,Stadt Göttingen,171,24,3382
+2020-05-18,2020-06-10,Stadt Hann. Münden,16,0,3382
+2020-05-18,2020-06-10,Samtgemeinde Hattorf am Harz,43,6,3382
+2020-05-18,2020-06-10,Stadt Herzberg am Harz,207,17,3382
+2020-05-18,2020-06-10,Stadt Osterode am Harz,94,17,3382
+2020-05-18,2020-06-10,Samtgemeinde Radolfshausen,2,0,3382
+2020-05-18,2020-06-10,Gemeinde Rosdorf,8,0,3382
+2020-05-18,2020-06-10,Gemeinde Staufenberg,5,1,3382
+2020-05-18,2020-06-10,Gemeinde Walkenried,4,0,3382
 2020-05-19,,Flecken Adelebsen,6,3,3397
 2020-05-19,,Gemeinde Bad Grund (Harz),45,4,3397
 2020-05-19,,Stadt Bad Lauterberg im Harz,83,9,3397
 2020-05-19,,Stadt Bad Sachsa,76,4,3397
 2020-05-19,,Flecken Bovenden,7,2,3397
 2020-05-19,,Samtgemeinde Dransfeld,12,1,3397
+2020-05-19,,Stadt Duderstadt,25,2,3397
+2020-05-19,,Gemeinde Friedland,2,0,3397
+2020-05-19,,Samtgemeinde Gieboldehausen,20,5,3397
+2020-05-19,,Gemeinde Gleichen,6,0,3397
+2020-05-19,,Stadt Göttingen,171,24,3397
+2020-05-19,,Stadt Hann. Münden,16,0,3397
+2020-05-19,,Samtgemeinde Hattorf am Harz,43,6,3397
+2020-05-19,,Stadt Herzberg am Harz,207,17,3397
+2020-05-19,,Stadt Osterode am Harz,94,15,3397
+2020-05-19,,Samtgemeinde Radolfshausen,2,0,3397
+2020-05-19,,Gemeinde Rosdorf,9,1,3397
+2020-05-19,,Gemeinde Staufenberg,5,1,3397
+2020-05-19,,Gemeinde Walkenried,4,0,3397
 2020-05-20,,Flecken Adelebsen,6,3,3403
 2020-05-20,,Gemeinde Bad Grund (Harz),45,4,3403
 2020-05-20,,Stadt Bad Lauterberg im Harz,83,9,3403
 2020-05-20,,Stadt Bad Sachsa,76,4,3403
 2020-05-20,,Flecken Bovenden,7,2,3403
 2020-05-20,,Samtgemeinde Dransfeld,12,1,3403
+2020-05-20,,Stadt Duderstadt,25,2,3403
+2020-05-20,,Gemeinde Friedland,2,0,3403
+2020-05-20,,Samtgemeinde Gieboldehausen,20,5,3403
+2020-05-20,,Gemeinde Gleichen,6,0,3403
+2020-05-20,,Stadt Göttingen,173,26,3403
+2020-05-20,,Stadt Hann. Münden,16,0,3403
+2020-05-20,,Samtgemeinde Hattorf am Harz,43,6,3403
+2020-05-20,,Stadt Herzberg am Harz,207,16,3403
+2020-05-20,,Stadt Osterode am Harz,94,15,3403
+2020-05-20,,Samtgemeinde Radolfshausen,2,0,3403
+2020-05-20,,Gemeinde Rosdorf,9,1,3403
+2020-05-20,,Gemeinde Staufenberg,5,1,3403
+2020-05-20,,Gemeinde Walkenried,4,0,3403
 2020-05-21,2020-06-10,Flecken Adelebsen,6,3,3404
 2020-05-21,2020-06-10,Gemeinde Bad Grund (Harz),45,4,3404
 2020-05-21,2020-06-10,Stadt Bad Lauterberg im Harz,83,9,3404
@@ -342,24 +511,76 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-05-25,2020-05-26,Stadt Bad Sachsa,76,4,3411
 2020-05-25,2020-05-26,Flecken Bovenden,7,2,3411
 2020-05-25,2020-05-26,Samtgemeinde Dransfeld,12,1,3411
+2020-05-25,2020-05-26,Stadt Duderstadt,25,2,3411
+2020-05-25,2020-05-26,Gemeinde Friedland,2,0,3411
+2020-05-25,2020-05-26,Samtgemeinde Gieboldehausen,20,4,3411
+2020-05-25,2020-05-26,Gemeinde Gleichen,6,0,3411
+2020-05-25,2020-05-26,Stadt Göttingen,175,22,3411
+2020-05-25,2020-05-26,Stadt Hann. Münden,16,0,3411
+2020-05-25,2020-05-26,Samtgemeinde Hattorf am Harz,43,5,3411
+2020-05-25,2020-05-26,Stadt Herzberg am Harz,207,15,3411
+2020-05-25,2020-05-26,Stadt Osterode am Harz,96,16,3411
+2020-05-25,2020-05-26,Samtgemeinde Radolfshausen,2,0,3411
+2020-05-25,2020-05-26,Gemeinde Rosdorf,15,7,3411
+2020-05-25,2020-05-26,Gemeinde Staufenberg,5,1,3411
+2020-05-25,2020-05-26,Gemeinde Walkenried,4,0,3411
 2020-05-26,,Flecken Adelebsen,6,2,3418
 2020-05-26,,Gemeinde Bad Grund (Harz),45,4,3418
 2020-05-26,,Stadt Bad Lauterberg im Harz,83,6,3418
 2020-05-26,,Stadt Bad Sachsa,76,4,3418
 2020-05-26,,Flecken Bovenden,7,2,3418
 2020-05-26,,Samtgemeinde Dransfeld,12,0,3418
+2020-05-26,,Stadt Duderstadt,25,1,3418
+2020-05-26,,Gemeinde Friedland,2,0,3418
+2020-05-26,,Samtgemeinde Gieboldehausen,20,4,3418
+2020-05-26,,Gemeinde Gleichen,6,0,3418
+2020-05-26,,Stadt Göttingen,175,15,3418
+2020-05-26,,Stadt Hann. Münden,16,0,3418
+2020-05-26,,Samtgemeinde Hattorf am Harz,43,5,3418
+2020-05-26,,Stadt Herzberg am Harz,207,10,3418
+2020-05-26,,Stadt Osterode am Harz,97,13,3418
+2020-05-26,,Samtgemeinde Radolfshausen,2,0,3418
+2020-05-26,,Gemeinde Rosdorf,14,6,3418
+2020-05-26,,Gemeinde Staufenberg,5,1,3418
+2020-05-26,,Gemeinde Walkenried,4,0,3418
 2020-05-27,,Flecken Adelebsen,6,2,3424
 2020-05-27,,Gemeinde Bad Grund (Harz),45,4,3424
 2020-05-27,,Stadt Bad Lauterberg im Harz,83,6,3424
 2020-05-27,,Stadt Bad Sachsa,76,4,3424
 2020-05-27,,Flecken Bovenden,7,2,3424
 2020-05-27,,Samtgemeinde Dransfeld,12,0,3424
+2020-05-27,,Stadt Duderstadt,25,1,3424
+2020-05-27,,Gemeinde Friedland,2,0,3424
+2020-05-27,,Samtgemeinde Gieboldehausen,20,4,3424
+2020-05-27,,Gemeinde Gleichen,6,0,3424
+2020-05-27,,Stadt Göttingen,177,17,3424
+2020-05-27,,Stadt Hann. Münden,16,0,3424
+2020-05-27,,Samtgemeinde Hattorf am Harz,43,5,3424
+2020-05-27,,Stadt Herzberg am Harz,207,10,3424
+2020-05-27,,Stadt Osterode am Harz,97,13,3424
+2020-05-27,,Samtgemeinde Radolfshausen,2,0,3424
+2020-05-27,,Gemeinde Rosdorf,14,6,3424
+2020-05-27,,Gemeinde Staufenberg,5,1,3424
+2020-05-27,,Gemeinde Walkenried,4,0,3424
 2020-05-28,,Flecken Adelebsen,6,2,3438
 2020-05-28,,Gemeinde Bad Grund (Harz),45,4,3438
 2020-05-28,,Stadt Bad Lauterberg im Harz,83,6,3438
 2020-05-28,,Stadt Bad Sachsa,76,4,3438
 2020-05-28,,Flecken Bovenden,7,2,3438
 2020-05-28,,Samtgemeinde Dransfeld,12,0,3438
+2020-05-28,,Stadt Duderstadt,25,1,3438
+2020-05-28,,Gemeinde Friedland,2,0,3438
+2020-05-28,,Samtgemeinde Gieboldehausen,21,5,3438
+2020-05-28,,Gemeinde Gleichen,6,0,3438
+2020-05-28,,Stadt Göttingen,179,19,3438
+2020-05-28,,Stadt Hann. Münden,16,0,3438
+2020-05-28,,Samtgemeinde Hattorf am Harz,43,5,3438
+2020-05-28,,Stadt Herzberg am Harz,207,10,3438
+2020-05-28,,Stadt Osterode am Harz,97,12,3438
+2020-05-28,,Samtgemeinde Radolfshausen,2,0,3438
+2020-05-28,,Gemeinde Rosdorf,14,5,3438
+2020-05-28,,Gemeinde Staufenberg,5,1,3438
+2020-05-28,,Gemeinde Walkenried,4,0,3438
 2020-05-29,,Flecken Adelebsen,6,2,3440
 2020-05-29,,Gemeinde Bad Grund (Harz),45,4,3440
 2020-05-29,,Stadt Bad Lauterberg im Harz,83,6,3440
@@ -461,6 +682,19 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-06-04,,Stadt Bad Sachsa,76,3,3463
 2020-06-04,,Flecken Bovenden,9,3,3463
 2020-06-04,,Samtgemeinde Dransfeld,12,0,3463
+2020-06-04,,Stadt Duderstadt,26,2,3463
+2020-06-04,,Gemeinde Friedland,2,0,3463
+2020-06-04,,Samtgemeinde Gieboldehausen,23,6,3463
+2020-06-04,,Gemeinde Gleichen,7,1,3463
+2020-06-04,,Stadt Göttingen,263,100,3463
+2020-06-04,,Stadt Hann. Münden,16,0,3463
+2020-06-04,,Samtgemeinde Hattorf am Harz,43,4,3463
+2020-06-04,,Stadt Herzberg am Harz,207,10,3463
+2020-06-04,,Stadt Osterode am Harz,98,9,3463
+2020-06-04,,Samtgemeinde Radolfshausen,4,2,3463
+2020-06-04,,Gemeinde Rosdorf,27,12,3463
+2020-06-04,,Gemeinde Staufenberg,5,1,3463
+2020-06-04,,Gemeinde Walkenried,4,0,3463
 2020-06-05,,Flecken Adelebsen,6,2,3471
 2020-06-05,,Gemeinde Bad Grund (Harz),45,4,3471
 2020-06-05,,Stadt Bad Lauterberg im Harz,83,4,3471
@@ -657,6 +891,19 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-06-17,2020-06-18,Stadt Bad Sachsa,76,2,3508
 2020-06-17,2020-06-18,Flecken Bovenden,14,5,3508
 2020-06-17,2020-06-18,Samtgemeinde Dransfeld,12,0,3508
+2020-06-17,2020-06-18,Stadt Duderstadt,38,11,3508
+2020-06-17,2020-06-18,Gemeinde Friedland,2,0,3508
+2020-06-17,2020-06-18,Samtgemeinde Gieboldehausen,36,17,3508
+2020-06-17,2020-06-18,Gemeinde Gleichen,15,8,3508
+2020-06-17,2020-06-18,Stadt Göttingen,352,86,3508
+2020-06-17,2020-06-18,Stadt Hann. Münden,18,2,3508
+2020-06-17,2020-06-18,Samtgemeinde Hattorf am Harz,43,1,3508
+2020-06-17,2020-06-18,Stadt Herzberg am Harz,206,8,3508
+2020-06-17,2020-06-18,Stadt Osterode am Harz,98,9,3508
+2020-06-17,2020-06-18,Samtgemeinde Radolfshausen,4,0,3508
+2020-06-17,2020-06-18,Gemeinde Rosdorf,34,2,3508
+2020-06-17,2020-06-18,Gemeinde Staufenberg,6,2,3508
+2020-06-17,2020-06-18,Gemeinde Walkenried,4,0,3508
 2020-06-19,,Flecken Adelebsen,7,3,3516
 2020-06-19,,Gemeinde Bad Grund (Harz),45,4,3516
 2020-06-19,,Stadt Bad Lauterberg im Harz,83,3,3516
@@ -682,6 +929,19 @@ created,modified,gemeinde,faelle,infizierte,quelle
 2020-06-21,,Stadt Bad Sachsa,76,2,3520
 2020-06-21,,Flecken Bovenden,14,3,3520
 2020-06-21,,Samtgemeinde Dransfeld,12,0,3520
+2020-06-21,,Stadt Duderstadt,38,2,3520
+2020-06-21,,Gemeinde Friedland,6,4,3520
+2020-06-21,,Samtgemeinde Gieboldehausen,36,7,3520
+2020-06-21,,Gemeinde Gleichen,15,8,3520
+2020-06-21,,Stadt Göttingen,483,183,3520
+2020-06-21,,Stadt Hann. Münden,18,1,3520
+2020-06-21,,Samtgemeinde Hattorf am Harz,43,1,3520
+2020-06-21,,Stadt Herzberg am Harz,206,8,3520
+2020-06-21,,Stadt Osterode am Harz,99,10,3520
+2020-06-21,,Samtgemeinde Radolfshausen,4,0,3520
+2020-06-21,,Gemeinde Rosdorf,34,1,3520
+2020-06-21,,Gemeinde Staufenberg,6,1,3520
+2020-06-21,,Gemeinde Walkenried,4,0,3520
 2020-06-22,2020-07-03,Flecken Adelebsen,7,3,3521
 2020-06-22,2020-07-03,Gemeinde Bad Grund (Harz),45,4,3521
 2020-06-22,2020-07-03,Stadt Bad Lauterberg im Harz,83,3,3521
