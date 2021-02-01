@@ -1,31 +1,35 @@
-# corona-goettingen
-
-Dieses Repository enthält Skripte zum Herunterladen und Analysieren der Corona-Fallzahlen des Landkreis Göttingen auf Gemeindeebene. Die Zahlen stammen [von der Homepage der Stadt Göttingen](https://www.goettingen.de/aktuelles.html) wo sie seit April 2020 veröffentlicht werden.
+# Corona-Fallzahlen im Landkreis Göttingen
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nichtich/corona-goettingen/HEAD?filepath=Fallzahlen.ipynb)
 
-## Requirements
+> Inoffizielle Datensammlung zu Göttinger Corona-Fallzahlen
 
-Für die Datensammlung und -Extraktion:
+Dieses Repository enthält Corona-Fallzahlen des Landkreis Göttingen auf Gemeindeebene. Die Zahlen stammen [von der Homepage der Stadt Göttingen](https://www.goettingen.de/aktuelles.html) wo sie seit April 2020 veröffentlicht werden. Darüber hinaus enthalt das Repository Hilfsmittel zum
+Herunterladen und Analysieren der Daten.
+
+## Inhalt
+
+* [`fallzahlen.csv`](fallzahlen.csv) enthält die von der Homepage der Stadt Göttingen übernommenen Zahlen
+* [Fallzahlen.ipynb](Fallzahlen.ipynb) ist ein [Jupyter Notebook](https://jupyter-tutorial.readthedocs.io/de/latest/index.html) mit einigen Analysen. Das Notebook kann [hier mittels Binder](https://mybinder.org/v2/gh/nichtich/corona-goettingen/HEAD?filepath=Fallzahlen.ipynb) im Browser geöffnet werden. *Verbesserungsvorschläge sind willkommen!*
+
+## Technischer Hintergrund
+
+Für die Datensammlung und -Extraktion wird benötigt:
 
 * Bash
 * [pup](https://github.com/ericchiang/pup#pup)
 
-Für die Datenanalyse:
+Für die Datenanalyse wird benötigt:
 
 * Juypter Notebook mit Pandas (ggf. installierbar mit `pip3 install jupyter pandas matplotlib`)
 
-## Usage
-
-### Datensammlung
-
-Da der RSS-Feed der Homepage der Stadt Göttingen nicht richtig zu funktionieren scheint (?) werden einfach *alle* Artikel (ab Artikel-ID 3064 vom 4.3.2020) heruntergeladen:
+Da der RSS-Feed der Homepage der Stadt Göttingen nicht brauchbar ist (anscheinend tauchen nicht alle Artikel auf?) werden einfach *alle* Artikel (ab Artikel-ID 3064 vom 4.3.2020) heruntergeladen:
 
 ~~~bash
 for i in {3064..4310}; do ./download $i; sleep 1; done
 ~~~
 
-Zur Übersicht wird erstmal eine Liste aller Artikel mit Datum, URL und Titel erstellt:
+Zur Übersicht kann erstmal eine Liste aller Artikel mit Datum, URL und Titel erstellt werden:
 Anschließend werden aus den Artikeln Datum, Titel und Inhalt extrahiert:
 
 ~~~bash
@@ -43,10 +47,6 @@ Das Skript `update` ermittelt automatisch die letzte Artikel-ID, läd alle fehle
 ~~~
 ./update commit
 ~~~
-
-### Datenanalyse
-
-Die Datei [Fallzahlen.ipynb](Fallzahlen.ipynb) enthält ein exemplarisches Jupyter Notebook. Ergänzungen für weitere Analysen und schönere Visualisierungen sind willkommen!
 
 ## License
 
