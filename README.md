@@ -9,7 +9,7 @@ Herunterladen und Analysieren der Daten.
 
 ## Inhalt
 
-* [`fallzahlen.csv`](fallzahlen.csv) enthält die von der Homepage der Stadt Göttingen übernommenen Zahlen
+* [`fallzahlen.csv`](fallzahlen.csv) enthält die von der Homepage der Stadt Göttingen übernommenen Zahlen. In [dieses Google Spreadhseet](https://docs.google.com/spreadsheets/d/1b3PmQ2b6RC4gRC2K6Kb7oI4BbZ9LXTA5RvkSyq8y9EE/edit?usp=sharing) werden die Daten importiert.
 * [Fallzahlen.ipynb](Fallzahlen.ipynb) ist ein [Jupyter Notebook](https://jupyter-tutorial.readthedocs.io/de/latest/index.html) mit einigen Analysen. Das Notebook kann [hier mittels Binder](https://mybinder.org/v2/gh/nichtich/corona-goettingen/HEAD?filepath=Fallzahlen.ipynb) im Browser geöffnet werden. *Verbesserungsvorschläge sind willkommen!*
 
 ## Technischer Hintergrund
