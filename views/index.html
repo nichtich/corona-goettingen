@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="sanitize.css" rel="stylesheet"/>
+    <link href="layout.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1 id="top"><%= title %></h1>
+      <% const { datum, quelle } = fallzahlen.slice(-1)[0] %>
+      <p>
+        <label>Stand:</label> <%= datum %>
+        (<a href="https://www.goettingen.de/magazin/artikel.php?artikel=<%= quelle %>">Quelle</a>)
+      </p>
+    </header>
+    <nav>
+      <h2>Städte und Gemeinden</h2>
+      <ul>
+      <% for (g of gemeinden) { %>
+        <li>
+          <a href="#<%= g.id %>"><%= g.name %></a>          
+        </li>
+      <% } %>
+      </ul>
+    </nav>
+    <% for (g of gemeinden) { %>
+    <section>
+      <h2 id="<%= g.id %>">
+        <a href="#top">⬆</a>
+        <%= g.name %> <a href="https://www.openstreetmap.org/relation/<%= g.osm %>">🌐</a>
+      </h2>
+      <% 
+        const { faelle, infizierte } = g.zahlen.slice(-1)[0];
+        const neu = g.zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
+      %>
+      <div style="display: flex; flex-wrap: wrap">
+        <ul style="width: 50%" class="cell">
+          <li>
+            <label>Einwohner: </label><%= g.einwohner %> (31.12.2019)
+            ⇒  1 Person ≈ <%= Math.round(100000/g.einwohner) %> Inzidenzwert
+          </li><li>
+            <label>Derzeit Infiziert: </label><%= infizierte %>
+          </li><li>
+            <label>Fälle insgesamt: </label><%= faelle %>
+            <% if (neu) { %>
+              <span class="neu-<%= neu>0 ? 'plus' : 'minus' %>">
+                <%= ['','+'][+(neu > 0)] + neu %>
+              </span>
+            <% } %>
+          </li>
+        </ul>
+        <img src="<%= g.id %>.png" style="width: 50%" class="cell"/>
+      </div>
+    </section>
+    <% } %>
+  </body>
+</html>

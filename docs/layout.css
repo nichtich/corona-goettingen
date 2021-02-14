@@ -1,0 +1,20 @@
+body {
+  margin: 1em;
+  font-family: sans-serif;
+}
+h1 {
+  border-bottom: thin darkgrey solid;
+}
+label {
+  font-weight: bold;
+}
+.cell {
+  flex-grow: 1;
+}
+ul.cell {
+  list-style: none;
+}
+.neu-plus:before, .neu-minus:before { content: "("; }
+.neu-plus:after, .neu-minus:after { content: ")"; }
+.neu-plus { color: red; }
+
