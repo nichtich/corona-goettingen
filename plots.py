@@ -10,8 +10,6 @@ zahlen = pd.read_csv('fallzahlen.csv', dtype=dtypes, parse_dates=['datum', 'upda
 
 gemeinden = json.load(open('gemeinden.json'))
 
-html = open("index.html", "w")
-
 for g in gemeinden:
     infizierte = zahlen[zahlen["gemeinde"]==g["name"]][['datum','infizierte']]
     infizierte.set_index(['datum'], inplace=True)
@@ -20,7 +18,6 @@ for g in gemeinden:
     img = "docs/%s.png" % (g["id"])
     fig.figure.savefig(img)
     print(g["name"])
-    html.write("<img src='%s'>" % (img))
 
 #gemeinden = pd.read_csv('gemeinden.csv', dtype={'Gemeinde':'str', 'Einwohner':'Int64'})
 #gemeinden.set_index(['Gemeinde'],inplace=True)

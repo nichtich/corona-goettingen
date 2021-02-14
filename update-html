@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+
+AHEAD=$(git rev-list --count html..main)
+if [[ $AHEAD == "0" ]]
+then
+  echo "main branch contains no unmerged commits in branch html"
+  exit
+fi
+
+git checkout -f html
+git merge --no-commit main
+
+npm start &
+PID=$!
+quit() { 
+    kill $PID
+}
+trap quit EXIT
+
+./plots.py
+curl http://localhost:37085/ > docs/index.html
+
+git add docs
+git commit -m "update website"
+git checkout main
+git push origin html
