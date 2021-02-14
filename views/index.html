@@ -9,14 +9,35 @@
       <h1 id="top"><%= title %></h1>
       <% const { datum, quelle } = fallzahlen.slice(-1)[0] %>
       <p>
-        <label>Stand:</label> <%= datum %>
-        (<a href="https://www.goettingen.de/magazin/artikel.php?artikel=<%= quelle %>">Quelle</a>)
+        <dl>
+          <dt>Stand</dt>
+          <dd><%= datum %>
+          (<a href="https://www.goettingen.de/magazin/artikel.php?artikel=<%= quelle %>">Quelle</a>)
+          </dd>
+        </ul>
       </p>
     </header>
+    <section>
+      <p>
+        Diese Seite bieten einen Überblick über die Corona-Fallzahlen im Landkreis Göttingen.
+        Die Zahlen stammen <a href="https://www.goettingen.de/aktuelles.html">von der Homepage
+        der Stadt Göttingen</a> wo sie seit April 2020 regelmäßig (inzwischen täglich) veröffentlicht
+        werden. Achtung: sowohl auf Seiten der Stadt als auch bei der vorliegenden Datenauswertung
+        kann es zu Lücken und Fehler kommen, daher keine Gewähr!
+        Die Diagramme sollten aufgrund unterschiedlicher Skalen nicht direkt miteinander verglichen werden.
+      </p>
+    </section>
     <nav>
       <h2>Städte und Gemeinden</h2>
-      <ul>
-      <% for (g of gemeinden) { %>
+      <ul class="columns">
+      <% for (g of gemeinden) { 
+          // FIXME: assumes there is a value for every day!
+          g.serie = 0
+          const { faelle, infizierte } = g.zahlen.slice(-1)[0];
+          for (let i=g.zahlen.length-2; i && g.zahlen[i].faelle === faelle; i--) g.serie++
+          var woche = g.zahlen.slice(-8)
+          g.neu7tage = woche[7].faelle - woche[0].faelle
+      %>
         <li>
           <a href="#<%= g.id %>"><%= g.name %></a>          
         </li>
@@ -30,25 +51,35 @@
         <%= g.name %> <a href="https://www.openstreetmap.org/relation/<%= g.osm %>">🌐</a>
       </h2>
       <% 
-        const { faelle, infizierte } = g.zahlen.slice(-1)[0];
-        const neu = g.zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
+        const { zahlen, serie } = g
+        const { faelle, infizierte } = zahlen.slice(-1)[0];
+        const neueFaelle = zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
+        const mehrInfizierte = zahlen.slice(-2).map(row => row.infizierte).reduce((a,b) => b-a)
       %>
-      <div style="display: flex; flex-wrap: wrap">
-        <ul style="width: 50%" class="cell">
-          <li>
-            <label>Einwohner: </label><%= g.einwohner %> (31.12.2019)
-            ⇒  1 Person ≈ <%= Math.round(100000/g.einwohner) %> Inzidenzwert
-          </li><li>
-            <label>Derzeit Infiziert: </label><%= infizierte %>
-          </li><li>
-            <label>Fälle insgesamt: </label><%= faelle %>
-            <% if (neu) { %>
-              <span class="neu-<%= neu>0 ? 'plus' : 'minus' %>">
-                <%= ['','+'][+(neu > 0)] + neu %>
-              </span>
+      <div class="row">
+        <dl style="width: 50%" class="cell">
+          <dt>Fälle insgesamt</dt>
+          <dd><%= faelle %>
+            <%- include('differenz.html', { wert: neueFaelle }) %>
+            <% if (!neueFaelle) { %>
+              (stabil seit <%= serie ? (serie == 1 ? "gestern" : serie + " Tagen") : "heute" %>)
             <% } %>
-          </li>
-        </ul>
+          </dd>
+          <dt>Derzeit Infiziert</dt>
+          <dd><%= infizierte %>
+            <%- include('differenz.html', { wert: mehrInfizierte }) %>
+          </dd>
+          <dt>Neuinfektionen in den letzten 7 Tagen</dt>
+          <dd><%= g.neu7tage %>
+          <% if (g.neu7tage) { %>
+            ≈ Inzidenzwert <%= Math.round(100000/g.einwohner*g.neu7tage) %>
+          <% } %>
+          </dd>
+          <dt>Einwohner</dt>
+          <dd><%= g.einwohner %> (31.12.2019)
+            ⇒  1 Person ≈ Inzidenzwert <%= Math.round(100000/g.einwohner) %> 
+          </dd>
+        </dl>
         <img src="<%= g.id %>.png" style="width: 50%" class="cell"/>
       </div>
     </section>
