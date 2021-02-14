@@ -2,7 +2,7 @@ const csv = require('csvtojson')
 const express = require('express')
 const util = require('util')
 
-const port = 37037
+const port = process.env.PORT || 37037
 const title = 'Corona-Fallzahlen im Landkreis Göttingen'
 const gemeinden = require('./gemeinden.json') 
 
