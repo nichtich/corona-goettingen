@@ -8,13 +8,30 @@ h1 {
 label {
   font-weight: bold;
 }
+.row {
+  display: flex;
+  flex-direction: row;
+}
 .cell {
   flex-grow: 1;
 }
-ul.cell {
-  list-style: none;
+.columns {
+  column-count: 2;
 }
-.neu-plus:before, .neu-minus:before { content: "("; }
-.neu-plus:after, .neu-minus:after { content: ")"; }
-.neu-plus { color: red; }
 
+dt { font-weight: bold; }
+dt:after { content: ":"; }
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+  .columns {
+    column-count: 1;
+  }
+}
+
+.mehr:before, .weniger:before { content: "("; }
+.mehr:after, .weniger:after { content: ")"; }
+.mehr, .weniger.gut { color: red; }
+.weniger, .mehr.gut { color: green; }
