@@ -1,0 +1,5 @@
+<% if (wert) { %>
+  <span class="<%= wert>0 ? 'mehr' : 'weniger' %>">
+    <%= ['','+'][+(wert > 0)] + wert %>
+  </span>
+<% } %>

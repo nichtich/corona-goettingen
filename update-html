@@ -13,6 +13,9 @@ git merge --no-commit main
 
 npm start &
 PID=$!
+sleep 2
+[[ -e /proc/$PID ]] || exit
+
 quit() { 
     kill $PID
 }

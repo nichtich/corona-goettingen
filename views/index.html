@@ -37,9 +37,11 @@
           for (let i=g.zahlen.length-2; i && g.zahlen[i].faelle === faelle; i--) g.serie++
           var woche = g.zahlen.slice(-8)
           g.neu7tage = woche[7].faelle - woche[0].faelle
+          g.inzidenz = Math.round(100000/g.einwohner*g.neu7tage)
       %>
         <li>
           <a href="#<%= g.id %>"><%= g.name %></a>          
+          (<%- include('inzidenz.html', g ) -%>)
         </li>
       <% } %>
       </ul>
@@ -51,7 +53,7 @@
         <%= g.name %> <a href="https://www.openstreetmap.org/relation/<%= g.osm %>">🌐</a>
       </h2>
       <% 
-        const { zahlen, serie } = g
+        const { id, zahlen, serie, inzidenz, einwohner, neu7tage } = g
         const { faelle, infizierte } = zahlen.slice(-1)[0];
         const neueFaelle = zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
         const mehrInfizierte = zahlen.slice(-2).map(row => row.infizierte).reduce((a,b) => b-a)
@@ -70,17 +72,17 @@
             <%- include('differenz.html', { wert: mehrInfizierte }) %>
           </dd>
           <dt>Neuinfektionen in den letzten 7 Tagen</dt>
-          <dd><%= g.neu7tage %>
-          <% if (g.neu7tage) { %>
-            ≈ Inzidenzwert <%= Math.round(100000/g.einwohner*g.neu7tage) %>
+          <dd><%= neu7tage %>
+          <% if (neu7tage) { %>
+          ≈ <%- include('inzidenz.html', g) %>
           <% } %>
           </dd>
           <dt>Einwohner</dt>
-          <dd><%= g.einwohner %> (31.12.2019)
-            ⇒  1 Person ≈ Inzidenzwert <%= Math.round(100000/g.einwohner) %> 
+          <dd><%= einwohner %> (31.12.2019)
+            ⇒  1 Person ≈ Inzidenzwert <%= Math.round(100000/einwohner) %> 
           </dd>
         </dl>
-        <img src="<%= g.id %>.png" style="width: 50%" class="cell"/>
+        <img src="<%= id %>.png" style="width: 50%" class="cell"/>
       </div>
     </section>
     <% } %>
