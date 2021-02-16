@@ -35,3 +35,7 @@ dt:after { content: ":"; }
 .mehr:after, .weniger:after { content: ")"; }
 .mehr, .weniger.gut { color: red; }
 .weniger, .mehr.gut { color: green; }
+
+.green { color: green; }
+.red { color: red; }
+.orange { color: orange; }
