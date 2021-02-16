@@ -29,6 +29,10 @@
     </section>
     <nav>
       <h2>Städte und Gemeinden</h2>
+      <p>
+        In Klammern die Zahl der in den letzten 7 Tagen neu Infizierten und sich daraus
+        ergebende Inzidenz (Grün bis 7, Rot bei über 35).
+      </p>
       <ul class="columns">
       <% for (g of gemeinden) { 
           // FIXME: assumes there is a value for every day!
@@ -41,7 +45,7 @@
       %>
         <li>
           <a href="#<%= g.id %>"><%= g.name %></a>          
-          (<%- include('inzidenz.html', g ) -%>)
+          (<%= g.neu7tage %> = <%- include('inzidenz.html', g ) -%>)
         </li>
       <% } %>
       </ul>
