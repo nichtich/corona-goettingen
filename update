@@ -1,7 +1,13 @@
 #!/bin/bash
 set -e
 
-FIRST=$(ls artikel/*.html | tail -1 | tr -cd '0-9')
+if [[ -f "fallzahlen.csv" ]]
+then
+  FIRST=$(tail -1 fallzahlen.csv | awk -F, '{print $6}')
+else
+  FIRST=$(ls artikel/*.html | tail -1 | tr -cd '0-9')
+fi
+
 if [[ -z "$FIRST" ]]
 then
   FIRST=3064
