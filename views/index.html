@@ -43,9 +43,11 @@
           g.neu7tage = woche[7].faelle - woche[0].faelle
           g.inzidenz = Math.round(100000/g.einwohner*g.neu7tage)
       %>
-        <li>
+       <li<%= g.neu7tage ? '' : " class=zero" %>>
           <a href="#<%= g.id %>"><%= g.name %></a>          
+          <% if (g.neu7tage) { %>
           (<%= g.neu7tage %> = <%- include('inzidenz.html', g ) -%>)
+          <% } %>
         </li>
       <% } %>
       </ul>
