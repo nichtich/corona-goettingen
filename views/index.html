@@ -92,7 +92,9 @@
             ⇒  1 Person ≈ Inzidenzwert <%= Math.round(100000/einwohner) %> 
           </dd>
         </dl>
+        <% if (id != "landkreis" ) { %>
         <img src="<%= id %>.png" style="width: 50%" class="cell"/>
+        <% } %>
       </div>
     </section>
     <% } %>

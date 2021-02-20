@@ -1,5 +1,11 @@
 [
   {
+    "id": "landkreis",
+    "osm": "6679859",
+    "name": "Landkreis Göttingen",
+    "einwohner": 326041
+  },
+  {
     "id": "adelebsen",
     "osm": "1399100",
     "name": "Flecken Adelebsen",
