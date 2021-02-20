@@ -31,7 +31,7 @@
   },
   {
     "id": "dransfeld",
-    "osm": "1399074",
+    "osm": "1401831",
     "name": "Samtgemeinde Dransfeld",
     "einwohner": 9472
   },
@@ -49,7 +49,7 @@
   },
   {
     "id": "gieboldehausen",
-    "osm": "1399094",
+    "osm": "1399071",
     "name": "Samtgemeinde Gieboldehausen",
     "einwohner": 13581
   },
@@ -74,6 +74,7 @@
   {
     "id": "hattorf",
     "osm": "1416155",
+    "wikidata": "Q316613",
     "name": "Samtgemeinde Hattorf am Harz",
     "einwohner": 7291
   },
@@ -85,7 +86,7 @@
   },
   {
     "id": "osterode",
-    "osm": "1416144",
+    "osm": "1416133",
     "name": "Stadt Osterode am Harz",
     "einwohner": 22317
   },
