@@ -34,8 +34,8 @@
     <nav>
       <h2>Städte und Gemeinden</h2>
       <p>
-        In Klammern die Zahl der in den letzten 7 Tagen neu Infizierten und sich daraus
-        ergebende Inzidenz (Grün bis 7, Rot bei über 35).
+        In Klammern die neuen Fälle seit Gestern. Danach die Zahl der in den letzten 7 Tagen neu
+        Infizierten und sich daraus ergebende Inzidenz (Grün bis 7, Rot bei über 35).
       </p>
       <ul class="columns">
       <% for (g of gemeinden) { 
@@ -46,11 +46,13 @@
           var woche = g.zahlen.slice(-8)
           g.neu7tage = woche[7].faelle - woche[0].faelle
           g.inzidenz = Math.round(100000/g.einwohner*g.neu7tage)
+          const neueFaelle = g.zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
       %>
        <li<%= g.neu7tage ? '' : " class=zero" %>>
           <a href="#<%= g.id %>"><%= g.name %></a>          
+          <%- include('differenz.html', { wert: neueFaelle }) %>
           <% if (g.neu7tage) { %>
-          (<%= g.neu7tage %> = <%- include('inzidenz.html', g ) -%>)
+          <%= g.neu7tage %> = <%- include('inzidenz.html', g ) -%>
           <% } %>
         </li>
       <% } %>
