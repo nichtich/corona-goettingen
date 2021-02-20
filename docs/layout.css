@@ -36,6 +36,7 @@ dt:after { content: ":"; }
 .mehr, .weniger.gut { color: red; }
 .weniger, .mehr.gut { color: green; }
 
+.zero { background: lightgreen; }
 .green { color: green; }
 .red { color: red; }
 .orange { color: orange; }
