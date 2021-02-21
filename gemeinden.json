@@ -119,5 +119,12 @@
     "osm": "6683592",
     "name": "Gemeinde Walkenried",
     "einwohner": 4347
+  },
+  {
+    "id": "harz",
+    "osm": "1649194",
+    "wikidata": "Q820677",
+    "name": "Harz (gemeindefreies Gebiet)",
+    "einwohner": 0
   }
 ]
