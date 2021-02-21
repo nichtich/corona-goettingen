@@ -39,6 +39,7 @@
       </p>
       <ul class="columns">
       <% for (g of gemeinden) { 
+         if (g.einwohner) {
           // FIXME: assumes there is a value for every day!
           g.serie = 0
           const { faelle, infizierte } = g.zahlen.slice(-1)[0];
@@ -55,7 +56,9 @@
           <%= g.neu7tage %> = <%- include('inzidenz.html', g ) -%>
           <% } %>
         </li>
-      <% } %>
+      <% } else { %>
+        <li class="zero"><a href="#<%= g.id %>"><%= g.name %></a></li>
+      <% } } %>
       </ul>
     </nav>
     <% for (g of gemeinden) { %>
@@ -64,7 +67,7 @@
         <a href="#top">⬆</a>
         <%= g.name %> <a href="https://www.openstreetmap.org/relation/<%= g.osm %>">🌐</a>
       </h2>
-      <% 
+      <% if (g.einwohner) {
         const { id, zahlen, serie, inzidenz, einwohner, neu7tage } = g
         const { faelle, infizierte } = zahlen.slice(-1)[0];
         const neueFaelle = zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
@@ -99,6 +102,8 @@
         <% } %>
       </div>
     </section>
-    <% } %>
+    <% } else { %>
+     <p>Hier wohnt niemand.</p>
+    <% } } %>
   </body>
 </html>
