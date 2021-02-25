@@ -10,7 +10,7 @@ do
   if [[ $ID == [1-9]*([0-9]) ]]
   then
     FILE=$(printf "artikel/%04d.html" $ID)
-    wget -q -N -O $FILE "https://www.goettingen.de/magazin/artikel.php?artikel=$1"    
+    wget -q -N -O $FILE "https://www.goettingen.de/magazin/artikel.php?artikel=$1&menuid=197"    
     echo $FILE
   fi
 done
