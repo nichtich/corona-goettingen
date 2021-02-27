@@ -1,11 +1,6 @@
 #!/bin/bash
 
 npm start &
-PID=$!
-sleep 2
-[[ -e /proc/$PID ]] || exit
-
 ./plots.py
 curl http://localhost:37085/ > docs/index.html
-
-kill $PID
+curl http://localhost:37085/kill > /dev/null
