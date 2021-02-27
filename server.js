@@ -3,6 +3,7 @@ const express = require('express')
 const util = require('util')
 
 const port = process.env.PORT || 37037
+
 const title = 'Corona-Fallzahlen im Landkreis Göttingen'
 const gemeinden = require('./gemeinden.json') 
 
@@ -11,6 +12,7 @@ app.set('view engine', 'html')
 app.engine('html', require('ejs').renderFile)
 app.get('/', (req, res) => res.render('index.html'))
 app.use(express.static('docs'))
+app.get('/kill', (req, res) => process.exit())
 
 const nameIndex = gemeinden.reduce((obj, g) => { obj[g.name]=g; g.zahlen=[]; return obj }, {})
 const lkz = nameIndex['Landkreis Göttingen'].zahlen = []
