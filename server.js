@@ -18,11 +18,20 @@ const nameIndex = gemeinden.reduce((obj, g) => { obj[g.name]=g; g.zahlen=[]; ret
 const lkz = nameIndex['Landkreis Göttingen'].zahlen = []
 
 csv().fromFile('fallzahlen.csv').then(fallzahlen => {
-  var datum
+  const latest = fallzahlen.slice(-1)[0]
+
+  var datum = new Date(latest.datum)
+  app.locals = {
+    gemeinden, title, util, datum, quelle: latest.quelle,
+    differenzInTagen: (a,b) => (a-b) / (1000 * 60 * 60 * 24),
+  }
+
+  datum = undefined 
   fallzahlen.forEach(row => {
     const region = nameIndex[row.gemeinde]
     if (!region) return // filter out "Samtgemeinde Hattorf am Harz und Stadt Herzberg am Harz"
     
+    row.datum = new Date(row.datum)
     region.zahlen.push(row)
     if (datum === row.datum) {
       lkz[lkz.length-1].faelle += 1*row.faelle
@@ -33,6 +42,5 @@ csv().fromFile('fallzahlen.csv').then(fallzahlen => {
     }
   })
 
-  app.locals = { gemeinden, title, util, fallzahlen }
   app.listen(port, () => console.log(`http://localhost:${port}/`))
 })
