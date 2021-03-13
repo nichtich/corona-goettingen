@@ -1,5 +1,5 @@
 <% if (wert) { %>
-  <span class="<%= wert>0 ? 'mehr' : 'weniger' %>">
+  <span class="<%= wert>0 ? 'mehr' : 'weniger' %>" title="<%= help %> seit gestern">
     <%= ['','+'][+(wert > 0)] + wert %>
   </span>
 <% } %>

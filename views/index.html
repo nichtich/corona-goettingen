@@ -34,7 +34,7 @@
       <h2>Städte und Gemeinden</h2>
       <p>
         In Klammern die neuen Fälle seit Gestern. Danach die Zahl der in den letzten 7 Tagen neu
-        Infizierten und sich daraus ergebende Inzidenz (Grün bis 7, Rot bei über 35).
+        Infizierten und sich daraus ergebende Inzidenz (Grün bis 7 oder maximal 1 Person, Rot bei über 35).
       </p>
       <ul class="columns">
       <% for (region of gemeinden) { 
@@ -54,9 +54,9 @@
           region.inzidenz = Math.round(100000/einwohner*region.neu7tage)
           region.neueFaelle = zahlen.slice(-2).map(row => row.faelle).reduce((a,b) => b-a)
       %>
-       <li<%= region.neu7tage ? '' : " class=zero" %>>
+        <li<%= region.neu7tage > 0 ? '' : " class=zero" %>>
           <a href="#<%= id %>"><%= name %></a>          
-          <%- include('differenz.html', { wert: region.neueFaelle }) %>
+          <%- include('differenz.html', { wert: region.neueFaelle, help: 'neue Fälle' }) %>
           <% if (region.neu7tage) { %>
           <%= region.neu7tage %> = <%- include('inzidenz.html', region) -%>
           <% } %>
@@ -82,7 +82,7 @@
         <dl style="width: 50%" class="cell">
           <dt>Fälle insgesamt</dt>
           <dd><%= faelle %>
-            <%- include('differenz.html', { wert: neueFaelle }) %>
+            <%- include('differenz.html', { wert: neueFaelle, help: 'neue Fälle' }) %>
             <% if (stabilSeit) {
               const serie = differenzInTagen(datum, stabilSeit)
             %>
@@ -91,7 +91,7 @@
           </dd>
           <dt>Derzeit Infiziert</dt>
           <dd><%= infizierte %>
-            <%- include('differenz.html', { wert: mehrInfizierte }) %>
+            <%- include('differenz.html', { wert: mehrInfizierte, help: 'neu infizierte' }) %>
           </dd>
           <dt>Neuinfektionen in den letzten 7 Tagen</dt>
           <dd><%= neu7tage %>

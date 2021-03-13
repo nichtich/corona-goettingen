@@ -1,6 +1,6 @@
 fallzahlen.csv:
-	echo "datum,update,gemeinde,faelle,infizierte,quelle" > fallzahlen.csv
-	ls artikel/*.html | xargs -n1 ./fallzahlen >> fallzahlen.csv
+	echo "datum,update,gemeinde,faelle,infizierte,quelle" > $@
+	ls artikel/*.html | xargs -n1 ./fallzahlen >> $@
 
 artikel.tsv:
 	printf "id\tdatum\tupdate\ttitle\turl\n" > artikel.tsv
