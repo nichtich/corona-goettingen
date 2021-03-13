@@ -26,16 +26,16 @@ csv().fromFile('fallzahlen.csv').then(fallzahlen => {
     differenzInTagen: (a,b) => (a-b) / (1000 * 60 * 60 * 24),
   }
 
-  datum = undefined 
+  datum = undefined
   fallzahlen.forEach(row => {
     const region = nameIndex[row.gemeinde]
     if (!region) return // filter out "Samtgemeinde Hattorf am Harz und Stadt Herzberg am Harz"
     
     row.datum = new Date(row.datum)
     region.zahlen.push(row)
-    if (datum === row.datum) {
+    if (datum && datum.getTime() == row.datum.getTime()) {
       lkz[lkz.length-1].faelle += 1*row.faelle
-      lkz[lkz.length-1].infizierte += 1*row.infizierte
+      lkz[lkz.length-1].infizierte += 1*row.infizierte        
     } else {
       lkz.push({ datum, faelle: 1*row.faelle, infizierte: 1*row.infizierte, gemeinde: "Landkreis Göttingen"})
       datum = row.datum
